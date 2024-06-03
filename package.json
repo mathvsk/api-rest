@@ -9,7 +9,7 @@
     "knex:create-migrate": "npm run knex -- migrate:make",
     "migrate-latest": "npm run knex -- migrate:latest",
     "migrate-rollback": "npm run knex -- migrate:rollback",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +20,8 @@
     "@types/node": "^20.12.13",
     "eslint": "^8.57.0",
     "tsx": "^4.11.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   },
   "dependencies": {
     "@fastify/cookie": "^9.3.1",
