@@ -7,6 +7,8 @@
     "lint": "eslint src --ext .ts --fix",
     "knex": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js",
     "knex:create-migrate": "npm run knex -- migrate:make",
+    "migrate-latest": "npm run knex -- migrate:latest",
+    "migrate-rollback": "npm run knex -- migrate:rollback",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
