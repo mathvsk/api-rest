@@ -13,12 +13,11 @@ export async function transactionsRoutes(app: FastifyInstance) {
 
     const { title, amount, type } = createTransactionSchema.parse(request.body)
 
-    await knex('transactions')
-      .insert({
-        id: randomUUID(),
-        title,
-        amount: type === 'credit' ? amount : amount * -1,
-      })
+    await knex('transactions').insert({
+      id: randomUUID(),
+      title,
+      amount: type === 'credit' ? amount : amount * -1,
+    })
 
     return reply.status(201).send()
   })
@@ -39,5 +38,13 @@ export async function transactionsRoutes(app: FastifyInstance) {
     const transaction = await knex('transactions').where({ id }).first()
 
     return { transaction }
+  })
+
+  app.get('/balance', async () => {
+    const balance = await knex('transactions')
+      .sum('amount', { as: 'balance' })
+      .first()
+
+    return { balance }
   })
 }
