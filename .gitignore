@@ -1,6 +1,15 @@
-node_modules
+# IDE
 .idea
-db/app.db
-db/test.db
+
+# Dependencies
+node_modules
+
+# Database
+db/*.db
+
+# Environment
 .env
 .env.test
+
+# Build
+build
