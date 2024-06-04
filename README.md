@@ -30,7 +30,7 @@ npm run test
 ## API Endpoints
 A URL padrão do projeto é http://localhost:3000. Para alterar a porta, crie um arquivo .env e defina a variável **PORT**. Consulte o arquivo [.env.example](.env.example) para um exemplo.
 
-As requisições **GET** utilizam cookies para autenticação do usuário. Primeiro, é necessário chamar a rota **POST** para cadastrar o cookie no cabeçalho. As requisições **GET** utilizam **cookies** para validar o usuario que está fazendo a requisição, então é necessário primeiro chamar a rota de **POST** para cadastrar o cookie no header.
+As requisições **GET** utilizam cookies para autenticação do usuário. Primeiro, é necessário chamar a rota **POST** para cadastrar o cookie no cabeçalho.
 
 | Rota                                 | Descrição                            |
 |--------------------------------------|--------------------------------------|
@@ -40,7 +40,7 @@ As requisições **GET** utilizam cookies para autenticação do usuário. Prime
 | <kbd>POST /transactions/</kbd>       | Cadastra uma nova transação.         |
 
 ### Schemas
-### POST /transactions/
+#### POST /transactions/
 ```json
 {
   "title": "string",
